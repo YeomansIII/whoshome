@@ -13,3 +13,8 @@ PostgreSQL
 Ubuntu
 Raspbian
 
+Mifare RC 522 -Python 
+Adafruit - Python char LCD
+SPI PI
+RPI GPIO
+Raspberry Pi
