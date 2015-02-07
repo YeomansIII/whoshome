@@ -1,3 +1,15 @@
 from django.db import models
+from model_utils.models import TimeStampedModel
+from django.contrib.auth.models import User
 
-# Create your models here.
+class Person(TimeStampedModel):
+    user = models.OneToOneField(User)
+
+    tag_uuid = models.CharField(max_length=15)
+    is_home = models.BooleanField(default=True)
+
+    def __str__(self):              # __unicode__ on Python 2
+        return self.user.first_name + " " + self.user.last_name
+
+    def __unicode__(self):
+        return self.user.first_name + " " + self.user.last_name
