@@ -10,4 +10,7 @@
 
 .lg-icon{
   font-size: 60px;
+  margin: 0 auto;
+  display: block;
 }
+
