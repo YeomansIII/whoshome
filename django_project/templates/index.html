@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title>Material Design for Bootstrap</title>
+    <title>Whos Home</title>
 
     <!-- Mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,12 +18,17 @@
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Armata' rel='stylesheet' type='text/css'>
 
+    <!-- AngularJS -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>-->
+    
 
     <!-- jQuery -->
     <script src="/static/dist/js/jquery-2.1.3.min.js"></script>
+    <script src="/static/dist/js/app.js"></script>
+    
 
   </head>
-<body>
+<body ng-app="whoshome">
   <div class="KnockKnock">
     <div class="KnockKnockinner">
         <h1 class="text-animated-one">Knock.</h1>
@@ -32,13 +37,17 @@
     </div>
   </div>
 
-    <div class="container" id="maincontent">
+    <div class="container" id="maincontent" ng-controller="usersAtHomeCtrl">
 
 
       <div class="row ">
         <h1 class="header col-md-12 text-center">Who's <br><strong> There? </strong></h1>
       </div>
 
+
+      {% for person in person_list %}
+      
+      
       <div class="well page active row">
 
         <div class="icon-preview col-md-2">
@@ -46,116 +55,28 @@
         </div>
 
         <div class="col-md-8">
-          <h2 class="text-center">Eric Yeomansy</h2>
+          <h2 class="text-center">
+          {% if person.user.first_name == "" %}
+            Guest
+          {% else %}
+            {{ person.user.first_name }} {{ person.user.last_name }}</h2>
+          {% endif %}
         </div>
 
         <div class="col-md-2">
-          <p class="text-center">February 8th 00:00</p>
-        </div>
-
-      </div>
-
-      <div class="well page active row">
-
-        <div class="icon-preview col-md-2">
-          <i class="mdi-hardware-keyboard-alt lg-icon text-center"></i>
-        </div>
-
-        <div class="col-md-8">
-          <h2 class="text-center">Chris Lai-Fi</h2>
-        </div>
-        <div class="col-md-2">
-          <p class="text-center">February 8th 00:00</p>
+          <p class="text-center">{{ person.modified }}</p>
         </div>
       </div>
-
-      <div class="well page active row">
-
-        <div class="icon-preview col-md-2">
-          <i class="mdi-hardware-keyboard-alt lg-icon text-center"></i>
-        </div>
-
-        <div class="col-md-8">
-          <h2 class="text-center">JJ Yeomansy</h2>
-        </div>
-
-        <div class="col-md-2">
-          <p class="text-center">February 8th 00:00</p>
-        </div>
-
-      </div>
-
-      <div class="well page active row">
-
-        <div class="icon-preview col-md-2">
-          <i class="mdi-hardware-keyboard-alt lg-icon text-center"></i>
-        </div>
-
-        <div class="col-md-8">
-          <h2 class="text-center">Ben Bear</h2>
-        </div>
-
-        <div class="col-md-2">
-          <p class="text-center">February 8th 00:00</p>
-        </div>
-
-      </div>
-
-      <div class="well page active row">
-
-        <div class="icon-preview col-md-2">
-          <i class="mdi-hardware-keyboard-alt lg-icon text-center"></i>
-        </div>
-
-        <div class="col-md-8">
-          <h2 class="text-center">Olegna Lerro</h2>
-        </div>
-
-        <div class="col-md-2">
-          <p class="text-center">February 8th 00:00</p>
-        </div>
-
-      </div>
-
-      <div class="well page active row">
-
-        <div class="icon-preview col-md-2">
-          <i class="mdi-hardware-keyboard-alt lg-icon text-center"></i>
-        </div>
-
-        <div class="col-md-8">
-          <h2 class="text-center">It's a Little Harsh</h2>
-        </div>
-
-        <div class="col-md-2">
-          <p class="text-center">February 8th 00:00</p>
-        </div>
-
-      </div>
-      <div class="well page active row">
-
-        <div class="icon-preview col-md-2">
-          <i class="mdi-hardware-keyboard-alt lg-icon text-center"></i>
-        </div>
-
-        <div class="col-md-8">
-          <h2 class="text-center">Rick Maller</h2>
-        </div>
-
-        <div class="col-md-2">
-          <p class="text-center">February 8th 00:00</p>
-        </div>
-
-      </div>
+        {% endfor %}
 
     </div> <!-- /container -->
 
     <img id="lamp" src="/static/dist/img/lamp.svg"/>
     <img id="chair" src="/static/dist/img/chair.svg"/>
     <img id="window" src="/static/dist/img/noun_54891_cc.svg"/>
-
-
-
+  
+  <!-- JavaScript -->
+ 
 
 </body>
 </html>
