@@ -35,7 +35,7 @@ def whoshome(request):
     person_list = Person.objects.filter(is_home=True)
     jsons = {'personsAtHome':[]}
     for person in person_list:
-        name = person.__str__()
+        name = person.user.first_name + " " + person.user.last_name
         timestamp = str(person.modified)
         jsons['personsAtHome'].append({'name':name,'timestamp':timestamp})
     return HttpResponse(json.dumps(jsons))
