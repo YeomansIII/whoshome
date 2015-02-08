@@ -8,3 +8,7 @@ function update_table() {
     }
   });
 }
+
+$(document).ready(function() {
+  update_table();
+});
