@@ -43,5 +43,11 @@ body{
   position: absolute;
   top: 50px;
   z-index: -1;
-  left: 150px;
+  left: 5%;
+}
+
+@media (max-width: 1300px) {
+  #window {
+    display: none;
+  }
 }
