@@ -13,7 +13,7 @@ def process(request, tag_uuid):
     if person_list:
         persona = person_list[0]
     else:
-        username = uuid.uuid4().hex[:6].upper()
+        username = uuid.uuid4().hex[:4].upper()
         password = username
         user = User.objects.create_user(username=username, email=None, password=password)
         persona = Person.objects.create(user=user, tag_uuid=tag_uuid, is_home=True)
