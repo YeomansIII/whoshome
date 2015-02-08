@@ -16,7 +16,7 @@ def process(request, tag_uuid):
         username = uuid.uuid4().hex[:4].upper()
         password = username
         user = User.objects.create_user(username=username, email=None, password=password)
-        persona = Person.objects.create(user=user, tag_uuid=tag_uuid, is_home=True)
+        persona = Person.objects.create(user=user, tag_uuid=tag_uuid)
         persona.save()
     jsons['name'] = persona.user.first_name + " " + persona.user.last_name
     jsons['pin'] = persona.user.username
