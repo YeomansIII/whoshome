@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Whos Home</title>
+
+  <!-- Mobile support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Twitter Bootstrap -->
+  <link href="/static/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/dist/css/whoshome.css" rel="stylesheet">
+
+  <!-- Material Design for Bootstrap -->
+  <link href="/static/dist/css/material-wfont.min.css" rel="stylesheet">
+  <link href="/static/dist/css/ripples.min.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Armata' rel='stylesheet' type='text/css'>
+
+  <!-- jQuery -->
+  <script src="/static/dist/js/jquery-2.1.3.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <form action="/{{ pin }}/" method="post">
+        {% csrf_token %} {{ form }}
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </div>
+  <!-- /container -->
+
+  <img id="lamp" src="/static/dist/img/lamp.svg" />
+  <img id="chair" src="/static/dist/img/chair.svg" />
+  <img id="window" src="/static/dist/img/noun_54891_cc.svg" />
+
+
+
+</body>
+
+</html>
