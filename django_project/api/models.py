@@ -9,7 +9,7 @@ class Person(TimeStampedModel):
     is_home = models.BooleanField(default=True)
 
     def __str__(self):              # __unicode__ on Python 2
-        return self.user.last_name + ", " + self.user.first_name + " ("+user.username+")"
+        return self.user.last_name + ", " + self.user.first_name + " ("+self.user.username+")"
 
     def __unicode__(self):
-        return self.user.last_name + ", " + self.user.first_name + " ("+user.username+")"
+        return self.user.last_name + ", " + self.user.first_name + " ("+self.user.username+")"
