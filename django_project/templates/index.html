@@ -55,7 +55,12 @@
         </div>
 
         <div class="col-md-8">
-          <h2 class="text-center">{{ person.name }}</h2>
+          <h2 class="text-center">
+          {% if person.user.first_name == "" %}
+            Guest
+          {% else %}
+            {{ person.user.first_name }} {{ person.user.last_name }}</h2>
+          {% endif %}
         </div>
 
         <div class="col-md-2">
