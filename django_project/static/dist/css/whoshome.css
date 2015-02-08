@@ -52,6 +52,12 @@ body{
   }
 }
 
+@media (max-width: 550px){
+  .KnockKnockinner h1 {
+    font-size: 60pt;
+  }
+}
+
 @-webkit-keyframes fade-in{
     0%{
         opacity:0;
