@@ -1,40 +1,37 @@
 var app = angular.module("whoshome", []);
 
 app.config(function($httpProvider, $interpolateProvider) {
-    $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-    $interpolateProvider.startSymbol('{$');
-    $interpolateProvider.endSymbol('$}');
+  $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+  $interpolateProvider.startSymbol('{$');
+  $interpolateProvider.endSymbol('$}');
 });
 
 function update_table() {
-	console.log("THIS FUNC RUNNING");
-$.ajax({type: "GET", url: "http://www.whoshome.me/api/whoshome/", success: function() { alert("ASDF"); }});
+  console.log("THIS FUNC RUNNING");
+  $.ajax({
+    type: "GET",
+    url: "http://www.whoshome.me/api/whoshome/",
+    success: function() {
+      alert("ASDF");
+    }
+  });
 }
 
-app.controller("usersAtHomeCtrl", function($scope, $http){
+app.controller("usersAtHomeCtrl", function($scope, $http) {
 
-	$.ajax({
-  dataType: "json",
-  url: "http://www.whoshome.me/api/whoshome/",
-  dataType: 'json',
-  success: function (data) {
-  		alert(data);
-  		$scope.users = data;
+  });
+  // $http.get('http://ip.jsontest.com/?callback=showMyIP').
+  //  success(function(data, status, headers, config) {
+  //    // this callback will be called asynchronously
+  //    // when the response is available
 
-  }
-});
-	 // $http.get('http://ip.jsontest.com/?callback=showMyIP').
-	 //  success(function(data, status, headers, config) {
-	 //    // this callback will be called asynchronously
-	 //    // when the response is available
+  //    $scope.users = data;
+  //  }).
+  //  error(function(data, status, headers, config) {
+  //    // called asynchronously if an error occurs
+  //    // or server returns response with an error status.
 
-	 //    $scope.users = data;
-	 //  }).
-	 //  error(function(data, status, headers, config) {
-	 //    // called asynchronously if an error occurs
-	 //    // or server returns response with an error status.
-
-	 //    $scope.users = "not good";
-	 //  });
+  //    $scope.users = "not good";
+  //  });
 
 });
