@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // var app = angular.module("whoshome", []);
 
 // app.config(function($httpProvider, $interpolateProvider) {
@@ -6,11 +7,20 @@
 //     $interpolateProvider.endSymbol('$}');
 // });
 
+=======
+>>>>>>> edce05ffd7c72f889cb84c06668c805e858eef8c
 function update_table() {
-	console.log("THIS FUNC RUNNING");
-$.ajax({type: "GET", url: "http://www.whoshome.me/api/whoshome/", success: function() { alert("ASDF"); }});
+  console.log("THIS FUNC RUNNING");
+  $.ajax({
+    type: "GET",
+    url: "http://www.whoshome.me/api/whoshome/",
+    success: function() {
+      alert("ASDF");
+    }
+  });
 }
 
+<<<<<<< HEAD
 // app.controller("usersAtHomeCtrl", function($scope, $http){
 
 // // 	$.ajax({
@@ -38,3 +48,8 @@ $.ajax({type: "GET", url: "http://www.whoshome.me/api/whoshome/", success: funct
 // 	 //  });
 
 // });
+=======
+$(document).ready(function() {
+  update_table();
+});
+>>>>>>> edce05ffd7c72f889cb84c06668c805e858eef8c
