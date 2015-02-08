@@ -1,12 +1,16 @@
 * {
   box-sizing: border-box;
 }
-
+html{
+  height: 100%;
+}
 body{
   background-color: white !important;
+  min-height:100%;
+  position:relative;
 }
 .well{
-  background-color: #E1E1E1 !important;
+  background-color: rgba(225,225,225, 0.95) !important;
 }
 .header{
   font-family: 'Armata', sans-serif;
@@ -19,13 +23,25 @@ body{
   display: block;
 }
 
-.footericon{
+#lamp{
+  width: 400px;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  right: 241px;
+}
+#chair{
   width: 300px;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  right: 100px;
 }
-footer {
-  width: 100%;
-  overflow: auto;
-}
-footer img {
-  float: right
+
+#window{
+  width: 500px;
+  position: absolute;
+  top: 50px;
+  z-index: -1;
+  left: 150px;
 }
