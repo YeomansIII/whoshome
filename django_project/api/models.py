@@ -6,7 +6,7 @@ class Person(TimeStampedModel):
     user = models.OneToOneField(User)
 
     tag_uuid = models.CharField(max_length=15)
-    is_home = models.BooleanField(default=False)
+    is_home = models.BooleanField(default=True)
     new = models.BooleanField(default=True)
 
     def __str__(self):              # __unicode__ on Python 2

@@ -1,0 +1,14 @@
+@-webkit-keyframes slide-down {
+  0% {
+    top: -300px;
+  }
+  100% {
+    top: 0;
+  }
+}
+#regcontain {
+    -webkit-animation:slide-down 2s;
+    -moz-animation:slide-down 2s;
+    -o-animation:slide-down 2s
+    animation:slide-down 2s;
+}
