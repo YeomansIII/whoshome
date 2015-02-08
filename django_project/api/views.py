@@ -31,10 +31,11 @@ def process(request, tag_uuid):
     person.save()
     return HttpResponse(json.dumps(jsons))
 
-def buildings_list(request):
-    person_list = Person.objects.order_by('name')[:5]
-    jsons = '{"buildings":['
-    for p in building_list:
-        jsons += '"'+p.__str__()+'":"'+p.address.__str__()+'",'
-    jsons = jsons[:-1]+']}'
-    return HttpResponse(jsons)
+def whoshome(request):
+    person_list = Person.objects.filter(is_home=True)
+    jsons = {'personsAtHome':[]}
+    for person in person_list:
+        name = person.__str__()
+        timestamp = str(person.modified)
+        jsons['personsAtHome'].append({'name':name,'timestamp':timestamp})
+    return HttpResponse(json.dumps(jsons))
