@@ -19,7 +19,7 @@
     <link href='http://fonts.googleapis.com/css?family=Armata' rel='stylesheet' type='text/css'>
 
     <!-- AngularJS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>-->
     
 
     <!-- jQuery -->
@@ -28,7 +28,7 @@
     
 
   </head>
-<body ng-app="whoshome" onload="update_table()">
+<body ng-app="whoshome">
   <div class="KnockKnock">
     <div class="KnockKnockinner">
         <h1 class="text-animated-one">Knock.</h1>
@@ -45,6 +45,8 @@
       </div>
 
 
+      {% for person in person_list %}
+      
       
       <div class="well page active row">
 
@@ -53,111 +55,14 @@
         </div>
 
         <div class="col-md-8">
-          <h2 class="text-center">Eric Yeomansy</h2>
+          <h2 class="text-center">{{ person.name }}</h2>
         </div>
 
         <div class="col-md-2">
-          <p class="text-center">February 8th 00:00</p>
-        </div>
-
-      </div>
-
-        <div class="well page active row" >
-          My JSON is {$ users $}
-        </div>
-
-      <div class="well page active row">
-
-        <div class="icon-preview col-md-2">
-          <i class="mdi-hardware-keyboard-alt lg-icon text-center"></i>
-        </div>
-
-        <div class="col-md-8">
-          <h2 class="text-center">Chris Lai-Fi</h2>
-        </div>
-        <div class="col-md-2">
-          <p class="text-center">February 8th 00:00</p>
+          <p class="text-center">{{ person.modified }}</p>
         </div>
       </div>
-
-      <div class="well page active row">
-
-        <div class="icon-preview col-md-2">
-          <i class="mdi-hardware-keyboard-alt lg-icon text-center"></i>
-        </div>
-
-        <div class="col-md-8">
-          <h2 class="text-center">JJ Yeomansy</h2>
-        </div>
-
-        <div class="col-md-2">
-          <p class="text-center">February 8th 00:00</p>
-        </div>
-
-      </div>
-
-      <div class="well page active row">
-
-        <div class="icon-preview col-md-2">
-          <i class="mdi-hardware-keyboard-alt lg-icon text-center"></i>
-        </div>
-
-        <div class="col-md-8">
-          <h2 class="text-center">Ben Bear</h2>
-        </div>
-
-        <div class="col-md-2">
-          <p class="text-center">February 8th 00:00</p>
-        </div>
-
-      </div>
-
-      <div class="well page active row">
-
-        <div class="icon-preview col-md-2">
-          <i class="mdi-hardware-keyboard-alt lg-icon text-center"></i>
-        </div>
-
-        <div class="col-md-8">
-          <h2 class="text-center">Olegna Lerro</h2>
-        </div>
-
-        <div class="col-md-2">
-          <p class="text-center">February 8th 00:00</p>
-        </div>
-
-      </div>
-
-      <div class="well page active row">
-
-        <div class="icon-preview col-md-2">
-          <i class="mdi-hardware-keyboard-alt lg-icon text-center"></i>
-        </div>
-
-        <div class="col-md-8">
-          <h2 class="text-center">It's a Little Harsh</h2>
-        </div>
-
-        <div class="col-md-2">
-          <p class="text-center">February 8th 00:00</p>
-        </div>
-
-      </div>
-      <div class="well page active row">
-
-        <div class="icon-preview col-md-2">
-          <i class="mdi-hardware-keyboard-alt lg-icon text-center"></i>
-        </div>
-
-        <div class="col-md-8">
-          <h2 class="text-center">Rick Maller</h2>
-        </div>
-
-        <div class="col-md-2">
-          <p class="text-center">February 8th 00:00</p>
-        </div>
-
-      </div>
+        {% endfor %}
 
     </div> <!-- /container -->
 
