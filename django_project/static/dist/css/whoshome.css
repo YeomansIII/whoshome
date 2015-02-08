@@ -81,6 +81,10 @@ body{
     opacity:0;
     margin: 0 auto;
     -webkit-animation:fade-in 2s;
+    -moz-animation:fade-in 2s;
+    -o-animation:fade-in 2s
+    animation:fade-in 2s;
+}
   }
 .text-animated-two{
     position:relative;
@@ -90,6 +94,9 @@ body{
     opacity:0;
     margin: 0 auto;
     -webkit-animation:fade-in 3s;
+    -moz-animation:fade-in 3s;
+    -o-animation:fade-in 3s
+    animation:fade-in 3s;
 }
 
 @-webkit-keyframes fade-quick{
@@ -106,6 +113,9 @@ body{
 
 #maincontent{
   -webkit-animation:fade-quick 4s;
+  -moz-animation:fade-quick 4s;
+  -o-animation:fade-quick 4s;
+  animation:fade-quick 4s;
 
 }
 
