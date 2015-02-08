@@ -19,6 +19,13 @@ body{
   display: block;
 }
 
-.chairicon{
+.footericon{
   width: 300px;
+}
+footer {
+  width: 100%;
+  overflow: auto;
+}
+footer img {
+  float: right
 }

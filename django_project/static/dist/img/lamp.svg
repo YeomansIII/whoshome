@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="50px" height="50px" viewBox="2.5 -5.0 50.0 67.5" enable-background="new 0 0 50 50" xml:space="preserve">
-<g>
-	<path fill="#000000" d="M23.94,17.349l0.367,29.999c-0.638,0.381-1.279,0.537-1.933,0.482c-0.67-0.047-1.408-0.047-2.209,0.021   c-1.441,0.114-2.492,0.655-3.147,1.629h17.341c-0.586-1.183-1.967-1.769-4.146-1.769c-1.813,0.164-3.134,0.035-3.913-0.364   l-0.367-30L23.94,17.349L23.94,17.349z M34.359,17.349h-18.72l5.907-14.935h6.783L34.359,17.349z M24.956,0.519   c0.651,0,0.978,0.344,0.978,1.012c0,0.59-0.324,0.884-0.978,0.884c-0.676,0-1.016-0.294-1.016-0.884   C23.94,0.863,24.28,0.519,24.956,0.519L24.956,0.519z"/>
-</g>
-<text x="0.0" y="58.75" font-size="2.5" font-weight="bold" font-family="Helvetica Neue, Helvetica, Arial-Unicode, Arial, Sans-serif" fill="#000000">Created by Mister Pixel</text><text x="0.0" y="61.25" font-size="2.5" font-weight="bold" font-family="Helvetica Neue, Helvetica, Arial-Unicode, Arial, Sans-serif" fill="#000000">from the Noun Project</text></svg>
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="50pt" height="50pt" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<path fill="#ffffff" d=" M 0.00 0.00 L 50.00 0.00 L 50.00 50.00 L 0.00 50.00 L 0.00 0.00 Z" />
+<path fill="#000000" d=" M 22.50 5.16 C 22.53 4.86 22.60 4.28 22.64 3.98 L 23.56 4.01 L 23.69 5.09 C 25.04 5.37 26.15 6.16 26.50 7.55 C 27.72 10.53 28.81 13.56 30.09 16.52 C 28.00 16.53 25.92 16.55 23.84 16.53 C 23.93 23.96 24.01 31.38 24.11 38.81 C 26.31 38.91 28.51 39.21 30.52 40.13 C 25.96 40.47 21.38 40.43 16.82 40.13 C 18.69 39.47 20.64 39.04 22.62 38.87 C 22.56 31.42 22.45 23.98 22.36 16.53 C 20.31 16.54 18.26 16.53 16.21 16.53 C 17.83 13.01 18.71 9.13 20.71 5.81 C 21.16 5.65 22.05 5.32 22.50 5.16 Z" />
+</svg>
