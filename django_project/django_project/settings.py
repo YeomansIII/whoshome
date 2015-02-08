@@ -57,7 +57,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'django_project.urls'
 
-WSGI_APPLICATION = 'settings.wsgi.application'
+WSGI_APPLICATION = 'django_project.wsgi.application'
 
 
 # Database
@@ -79,7 +79,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'EST'
 
 USE_I18N = True
 
